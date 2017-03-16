@@ -4,6 +4,7 @@
   "description": "",
   "main": "completeNodeServerWithDataChannel.js",
   "scripts": {
+    "start": "node completeNodeServerWithDataChannel.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -2,7 +2,7 @@ var static = require('node-static');
 
 var https = require('https');
 
-var timeout = 10000;
+var timeout = 100000;
 
 // Change directory to path of current JavaScript program
 var process = require('process');
@@ -24,8 +24,8 @@ var file = new(static.Server)();
 // We use the http module’s createServer function and
 // rely on our instance of node-static to serve the files
 var app = https.createServer(options, function (req, res) {
-  file.serve(req, res);
   setTimeout(timeout);
+  file.serve(req, res);
 }).listen(process.env.PORT);
 
 // Use socket.io JavaScript library for real-time web applications
